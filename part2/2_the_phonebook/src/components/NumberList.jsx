@@ -1,8 +1,15 @@
-const NumberList = ({ persons }) => 
+import NumberListItem from "./NumberListItem"
+
+const NumberList = ({ persons, handleDelete }) =>
     <ul>
-        {persons.map(person => 
-            <li key={person.id}>{person.name} {person.number}</li>
+        {persons.map(person =>
+            <NumberListItem
+                key={person.id}
+                person={person}
+                handleDelete={() => handleDelete(person.id)}
+            />
         )}
     </ul>
-    
+
+
 export default NumberList
