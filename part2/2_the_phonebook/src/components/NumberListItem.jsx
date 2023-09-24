@@ -1,5 +1,5 @@
 const NumberListItem = ({ person, handleDelete }) => 
-    <li key={person.id}>
+    <li className="person">
         {person.name} {person.number} <button onClick={handleDelete}>delete</button>
     </li>
 
